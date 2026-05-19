@@ -1,0 +1,22 @@
+## Visual Studio / .NET gitignore
+
+# Build output
+bin/
+obj/
+
+# VS temp files
+.vs/
+*.user
+*.suo
+*.wsuo
+*.slnx.sqlite
+
+# NuGet
+packages/
+
+# EF migrations sqlite temp
+*.db
+
+# OS
+Thumbs.db
+.DS_Store
