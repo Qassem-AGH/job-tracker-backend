@@ -1,5 +1,6 @@
 <Solution>
-  <Folder Name="/Solution Items/">
+  <Folder Name="/docs/">
+    <File Path="../docs/swagger-screenshot.png" />
     <File Path="README.md" />
   </Folder>
   <Project Path="JobTracker.API/JobTracker.API.csproj" />
