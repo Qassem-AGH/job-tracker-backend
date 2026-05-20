@@ -14,10 +14,4 @@
     <ProjectReference Include="..\JobTracker.Domain\JobTracker.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Applications\Commands\" />
-    <Folder Include="Applications\DTOs\" />
-    <Folder Include="Applications\Queries\" />
-  </ItemGroup>
-
 </Project>
