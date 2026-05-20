@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\JobTracker.Application\JobTracker.Application.csproj" />
     <ProjectReference Include="..\JobTracker.Infrastructure\JobTracker.Infrastructure.csproj" />
   </ItemGroup>
