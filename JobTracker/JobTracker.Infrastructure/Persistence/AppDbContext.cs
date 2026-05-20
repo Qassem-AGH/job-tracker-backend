@@ -10,5 +10,6 @@ public class AppDbContext : DbContext
 
     public DbSet<Company> Companies => Set<Company>();
     public DbSet<Job> Jobs => Set<Job>();
-    public DbSet<Application> Applications => Set<Application>();
+    public DbSet<JobTracker.Domain.Entities.Application> Applications
+        => Set<JobTracker.Domain.Entities.Application>();
 }
