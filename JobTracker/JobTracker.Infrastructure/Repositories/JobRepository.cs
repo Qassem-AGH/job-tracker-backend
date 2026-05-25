@@ -19,8 +19,13 @@ public class JobRepository : IJobRepository
 
     public async Task AddAsync(Job j, CancellationToken ct)
     {
-        _ctx.Jobs.Add(j);
-        await _ctx.SaveChangesAsync(ct);
+        var company = await _ctx.Companies.FindAsync(new object[] { j.CompanyId }, ct);
+        if (company is not null)
+        {
+            j.Company = company;
+            _ctx.Jobs.Add(j);
+            await _ctx.SaveChangesAsync(ct);
+        }
     }
 
     public async Task UpdateAsync(Job j, CancellationToken ct)
