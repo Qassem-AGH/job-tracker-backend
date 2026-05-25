@@ -19,8 +19,13 @@ public class ApplicationRepository : IApplicationRepository
 
     public async Task AddAsync(AppEntity a, CancellationToken ct)
     {
-        _ctx.Applications.Add(a);
-        await _ctx.SaveChangesAsync(ct);
+        var job = await _ctx.Jobs.FindAsync(new object[] { a.JobId }, ct);
+        if (job is not null)
+        {
+            a.Job = job;
+            _ctx.Applications.Add(a);
+            await _ctx.SaveChangesAsync(ct);
+        }
     }
 
     public async Task UpdateAsync(AppEntity a, CancellationToken ct)
